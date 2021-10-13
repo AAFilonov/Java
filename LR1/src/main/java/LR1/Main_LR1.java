@@ -1,3 +1,12 @@
+package LR1;
+
+
+import LR1.Task2;
+import LR1.Task3;
+import LR1.Task4;
+
+import java.io.IOException;
+
 /*2. Write a program that reads an integer angle (which may be positive or negative)
         and normalizes it to a value between 0 and 359 degrees. Try it first with the %
         operator, then with floorMod.
@@ -6,13 +15,11 @@
         4. Write a program that prints the smallest and largest positive double values.
         Hint: Look up Math.nextUp in the Java API*/
 
-
-import java.io.IOException;
-
-public class Main {
-    public static void main(String[] args) throws  IOException {
-        LR1.TaskRunner.runTasks();
-        LR2.TaskRunner.runTasks();
+public class Main_LR1 {
+    public static void main(String[] args) throws IOException {
+        Task2.doTask();
+        Task3.doTask();
+        Task4.doTask();
     }
 }
 
