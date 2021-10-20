@@ -4,24 +4,31 @@ package LR2;
 import java.io.IOException;
 
 /*
-1. Write a method public ArrayList<Double> readValues(String
-filename) throws ... that reads a file containing floating-point numbers.
-Throw appropriate exceptions if the file could not be opened or if some of the
-inputs are not floating-point numbers.
-2. Write a method public double sumOfValues(String filename)
-throws ... that calls the preceding method and returns the sum of the values
-in the file. Propagate any exceptions to the caller.
-3. Write a program that calls the preceding method and prints the result. Catch the
-exceptions and provide feedback to the user about any error conditions.
-4. Repeat the preceding exercise, but don't use exceptions. Instead, have
-readValues and sumOfValues return error codes of some kind.
-*/
+ 5. Implement an immutable class Point that describes a point in the plane. Provide
+a constructor to set it to a specific point, a no-arg constructor to set it to the origin,
 
+and methods getX, getY, translate, and scale. The translate method
+moves the point by a given amount in x- and y-direction. The scale method
+scales both coordinates by a given factor. Implement these methods so that they
+return new points with the results. For example,
+Click here to view code image
+Point p = new Point(3, 4).translate(1, 3).scale(0.5);
+should set p to a point with coordinates (2, 3.5).
+6. Repeat the preceding exercise, but now make translate and scale into
+mutators.
+7. Add javadoc comments to both versions of the Point class from the
+preceding exercises.
+ */
 public class Main_LR2 {
     public static void main(String[] args) throws IOException {
-        Task1.doTask();
-        Task2.doTask();
-        Task3.doTask();
+        ImmutablePoint p = new ImmutablePoint(3, 4).translate(1, 3).scale(0.5);
+        System.out.println(p);
+
+        MutablePoint p2 = new MutablePoint(3, 4);
+        p2.translate(1, 3);
+        p2.scale(0.5);
+        System.out.println(p2);
+
     }
 }
 

@@ -4,24 +4,35 @@ package LR6;
 import java.io.IOException;
 
 /*
-1. Write a method public ArrayList<Double> readValues(String
-filename) throws ... that reads a file containing floating-point numbers.
-Throw appropriate exceptions if the file could not be opened or if some of the
-inputs are not floating-point numbers.
-2. Write a method public double sumOfValues(String filename)
-throws ... that calls the preceding method and returns the sum of the values
-in the file. Propagate any exceptions to the caller.
-3. Write a program that calls the preceding method and prints the result. Catch the
-exceptions and provide feedback to the user about any error conditions.
-4. Repeat the preceding exercise, but don't use exceptions. Instead, have
-readValues and sumOfValues return error codes of some kind.
-*/
+Consider the method
+
+public static <T> T[] repeat(int n, T obj, IntFunction<T[]>
+constr)
+in Section 6.6.3, “You Cannot Instantiate Type Variables” (page 221). The call
+Arrays.repeat(10, 42, int[]::new) will fail. Why? How can you fix
+that? What do you need to do for the other primitive types?
+
+
+19. Consider the method
+public static <T> ArrayList<T> repeat(int n, T obj)
+in Section 6.6.3, “You Cannot Instantiate Type Variables” (page 221). This
+method had no trouble constructing an ArrayList<T> which contains an array
+of T values. Can you produce a T[] array from that array list without using a
+Class value or a constructor reference? If not, why not?WOW! eBook
+
+
+20. Implement the method
+Click here to view code image
+@SafeVarargs public static final <T> T[] repeat(int n,  T...
+objs)Return an array with n copies of the given objects. Note that no Class value or
+constructor reference is required since you can reflectively increase objs.*/
+
 
 public class Main_LR6 {
     public static void main(String[] args) throws IOException {
-       //Task1.doTask();
-       //Task2.doTask();
-        Task3.doTask();
+       Task1.doTask();
+       Task2.doTask();
+       Task3.doTask();
     }
 }
 

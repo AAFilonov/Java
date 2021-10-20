@@ -1,10 +1,6 @@
 package LR1;
 
 
-import LR1.Task2;
-import LR1.Task3;
-import LR1.Task4;
-
 import java.io.IOException;
 
 /*2. Write a program that reads an integer angle (which may be positive or negative)

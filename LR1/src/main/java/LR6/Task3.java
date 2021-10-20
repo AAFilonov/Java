@@ -4,9 +4,10 @@ import java.util.Arrays;
 
 /*
 20. Implement the method
-Click here to view code image
-@SafeVarargs public static final <T> T[] repeat(int n,  T...
-objs)Return an array with n copies of the given objects. Note that no Class value or
+
+@SafeVarargs
+public static final <T> T[] repeat(int n,  T... objs)
+Return an array with n copies of the given objects. Note that no Class value or
 constructor reference is required since you can reflectively increase objs.*/
 public class Task3 {
     public static void doTask() {
@@ -20,7 +21,7 @@ public class Task3 {
         if (n <= objs.length)
             return objs;
         else {
-            @SuppressWarnings("unchecked")
+
             T[] result = (T[]) java.lang.reflect.Array.newInstance
                     (objs.getClass().getComponentType(), n);
 
