@@ -1,4 +1,4 @@
-package LR1;
+package LR1_1;
 
 
 import java.io.IOException;
@@ -13,8 +13,8 @@ import java.io.IOException;
 
 public class Main_LR1 {
     public static void main(String[] args) throws IOException {
-        Task2.doTask();
-        Task3.doTask();
+        //Task2.doTask();
+        //Task3.doTask();
         Task4.doTask();
     }
 }

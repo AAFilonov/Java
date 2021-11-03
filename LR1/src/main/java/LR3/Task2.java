@@ -1,7 +1,6 @@
 package LR3;
 
-import java.util.Random;
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Task2 {
     public static void doTask() {
@@ -10,8 +9,13 @@ public class Task2 {
                 new Employee(200.0,"Петя"),
                 new Employee(5000.0,"Андрей Васильевич"),
         };
-        var largestSalary =  Measurable.largest(employees);
-        System.out.printf("Максимальная зарплата работников  равна %f \n",largestSalary);
+        var employWithMaxSalary = largest(employees);
+        System.out.printf("Работник  - %s \n", employWithMaxSalary);
+    }
 
+
+    static String largest(Measurable[] objects) {
+        var maxMeasurable = (Employee) Arrays.stream(objects).max((o1, o2) -> o1.getMeasure().compareTo(o2.getMeasure())).orElseThrow(() -> new RuntimeException("Массив пустой"));
+        return maxMeasurable.name;
     }
 }

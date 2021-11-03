@@ -1,4 +1,4 @@
-package LR1;
+package LR1_1;
 
 import java.io.BufferedReader;
 import java.io.IOException;

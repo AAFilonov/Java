@@ -8,8 +8,7 @@ import java.io.IOException;
 
 /*
 Define a class Point with a constructor public Point(double x,
-double y) and accessor methods getX, getY. Define a subclassWOW! eBook
-www.wowebook.org
+double y) and accessor methods getX, getY. Define a subclass
 LabeledPoint with a constructor public LabeledPoint(String
 label, double x, double y) and an accessor method getLabel.
 2. Define toString, equals, and hashCode methods for the classes of the
@@ -24,6 +23,7 @@ public class Main_LR4 {
     public static void main(String[] args) throws IOException {
         Point p = new Point(1, 1);
         Point p2 = new LabeledPoint("Точка 1.1", 1, 1);
+
     }
 }
 

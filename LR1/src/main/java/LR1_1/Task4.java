@@ -1,4 +1,4 @@
-package LR1;
+package LR1_1;
 
 
 /*4. Write a program that prints the smallest and largest positive double values.
@@ -12,10 +12,12 @@ public class Task4 {
     }
 
     private static void printMaxDouble() {
-        System.out.println(Double.MAX_VALUE);
+
+        System.out.println((Math.nextDown(Double.MAX_VALUE)));
     }
 
     private static void printMinDouble() {
-        System.out.println(Double.MIN_NORMAL);
+
+        System.out.println(Math.nextUp(0.0));
     }
 }

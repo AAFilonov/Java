@@ -1,7 +1,7 @@
 package LR3;
 
 public class Employee implements Measurable{
-    double salary;
+    Double salary;
     String name;
     Employee(double salary, String name){
         this.salary = salary;
@@ -9,7 +9,7 @@ public class Employee implements Measurable{
     }
 
     @Override
-    public double getMeasure() {
+    public Double getMeasure() {
         return salary;
     }
 }

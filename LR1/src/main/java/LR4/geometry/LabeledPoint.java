@@ -12,7 +12,8 @@ public class LabeledPoint  extends Point{
     public String getLabel() {
         return label;
     }
+
     public String getXY(){
-        return  String.valueOf(this.x)+y;
+        return  String.valueOf(this.x)+this.y;
     }
 }

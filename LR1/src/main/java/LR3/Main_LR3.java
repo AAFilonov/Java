@@ -22,7 +22,7 @@ public class Main_LR3 {
     public static void main(String[] args) throws IOException {
         Task1.doTask();
         Task2.doTask();
-        Task3.doTask();
+       //Task3.doTask();
     }
 }
 

@@ -20,8 +20,6 @@ throws ... that calls the preceding method and returns the sum of the values
 in the file. Propagate any exceptions to the caller.
 3. Write a program that calls the preceding method and prints the result. Catch the
 exceptions and provide feedback to the user about any error conditions.
-4. Repeat the preceding exercise, but don't use exceptions. Instead, have
-readValues and sumOfValues return error codes of some kind.
 */
 
 public class Main_LR5 {
@@ -36,7 +34,7 @@ public class Main_LR5 {
 
     public static void processFile(String filename) {
         try {
-            var sum = sumValues(filename);
+            var sum = sumofValues(filename);
             System.out.printf("Сумма значений в файле %s равна %f \n", filename, sum);
         } catch (IOException e) {
             System.out.println("Ошибка: Не удалось открыть файл " + filename);
@@ -54,7 +52,7 @@ public class Main_LR5 {
         return new ArrayList<Double>(output);
     }
 
-    public static Double sumValues(String filename) throws Exception {
+    public static Double sumofValues(String filename) throws Exception {
         var values = readValues(filename);
         return values.stream().reduce(Double::sum).orElseThrow(() -> new Exception("Неизвестная ошибка при суммировании"));
 
