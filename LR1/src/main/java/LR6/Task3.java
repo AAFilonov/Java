@@ -1,5 +1,8 @@
 package LR6;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Arrays;
 
 /*
@@ -10,18 +13,18 @@ public static final <T> T[] repeat(int n,  T... objs)
 Return an array with n copies of the given objects. Note that no Class value or
 constructor reference is required since you can reflectively increase objs.*/
 public class Task3 {
+    private final static Logger log = LogManager.getLogger(Task1.class);
     public static void doTask() {
 
         var array = repeat(10, 1, 2, 3);
-        System.out.println(Arrays.toString(array));
+        log.info(Arrays.toString(array));
     }
 
     @SafeVarargs
-    public static final <T> T[] repeat(int n, T... objs) {
+    public static <T> T[] repeat(int n, T... objs) {
         if (n <= objs.length)
             return objs;
         else {
-
             T[] result = (T[]) java.lang.reflect.Array.newInstance
                     (objs.getClass().getComponentType(), n);
 
@@ -35,10 +38,10 @@ public class Task3 {
     public static <T> T[] fillArray(int n, T[] source, T[] destination) {
         int i =-1;
         while (i < n) {
-            for (int j = 0; j < source.length; j++ ) {
+            for (T t : source) {
                 i++;
-                if(i>=n)return destination;
-                destination[i] = source[j];
+                if (i >= n) return destination;
+                destination[i] = t;
 
             }
 
